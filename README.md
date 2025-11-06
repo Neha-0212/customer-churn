@@ -1,115 +1,106 @@
-🧠 Azure Multi-Cloud Performance & Cost Metrics Dashboard
-📊 Overview
+📊 Customer Insights Dashboard: Spending, Satisfaction & Churn Analysis
+🧠 Overview
 
-This Power BI dashboard delivers an end-to-end analysis of multi-cloud performance and cost metrics across major providers — AWS, Azure, Google Cloud, and IBM Cloud.
-It enables cloud architects, DevOps engineers, and decision-makers to assess resource utilization, latency, deployment efficiency, and cost optimization for microservices deployed across environments.
+This Power BI dashboard analyzes customer spending behavior, satisfaction trends, and churn patterns in an online retail environment. It provides data-driven insights to help businesses identify churn drivers, evaluate promotion effectiveness, and measure overall customer engagement.
 
 🗂 Dataset Description
 
-Download Dataset
-
-The dataset captures operational metrics for multiple microservices (Service A–E) deployed on various cloud platforms.
-Each record represents a monitoring snapshot containing performance, cost, and deployment data.
+The dataset online_retail_customer_churn captures demographic, behavioral, and transactional details for 1,000 customers.
+Each record represents a single customer profile, containing purchase history, satisfaction metrics, and churn outcomes.
 
 Key Columns
 
 Column	Description
-ID	Unique identifier for each record
-Microservice Name	Name of the service (e.g., Service A, B, etc.)
-Cloud Provider	AWS, Azure, Google Cloud, IBM Cloud
-Region	Deployment location (e.g., US-East)
-Resource Utilization (%)	CPU/memory usage percentage
-Latency (ms)	Average request latency
-Cost ($)	Operational or deployment cost
-Deployment Time (hrs)	Time taken for full deployment
-Success Rate (%)	Percentage of successful transactions
-Data Transfer (GB)	Total data moved
-Environment	Development, Testing, or Production
-
-Example Record – Service B (AWS, Development):
-
-Resource Utilization: 64.25%
-
-Latency: 38.66 ms
-
-Cost: $2,037.22
-
-Deployment Time: 11.38 hrs
-
-Success Rate: 98.43%
-
-Data Transfer: 508.43 GB
-
+Customer_ID	Unique customer identifier
+Age	Customer age
+Annual_Income	Reported yearly income
+Average_Transaction_Amt	Average purchase value per transaction
+Num_of_Purchases	Total number of purchases
+Num_of_Returns	Total returns made by the customer
+Num_of_Support_Contacts	Customer support interactions
+Satisfaction_Score	Satisfaction rating (1–10)
+Promotion_Response	Promotion feedback – Responded / Ignored / Unsubscribed
+Email_Opt_In	Boolean flag for email marketing opt-in
+Last_Purchase_Days_Ago	Days since last purchase
+Total_Spend	Cumulative amount spent
+Years_as_Customer	Customer tenure
+Gender	Female / Male / Other
+Target_Churn	True if customer churned, False otherwise
 💡 Dashboard Highlights
-🔹 Performance Metrics
+🔹 Churn & Satisfaction
 
-Average Latency by Microservice & Cloud Provider: Identify latency bottlenecks across clouds.
+Satisfaction vs Churn: Visualizes churn probability relative to satisfaction levels.
 
-Resource Utilization (%): Visualize workload distribution and service intensity.
+Promotion Response vs Churn: Shows how engaged customers respond to promotions and their likelihood to stay.
 
-🔹 Cost Metrics
+🔹 Spending & Income Insights
 
-Total Cost by Cloud Provider: Compare operational expenses across AWS, Azure, GCP, and IBM Cloud.
+Income vs Total Spend & Purchases: Correlates income brackets with spending behavior and engagement frequency.
 
-Cost by Environment: Track spend differences between Development, Testing, and Production.
+Age (bins) vs Purchases: Identifies generational buying patterns and activity trends.
 
-🔹 Deployment Insights
+🔹 Customer Segmentation
 
-Data Transfer (GB) by Service: Pinpoint bandwidth-heavy workloads.
+Gender Distribution: Highlights customer demographic split.
 
-Cost vs Deployment Time: Discover relationships between time efficiency and cost.
+Email Opt-In Analysis: Shows percentage of customers participating in email campaigns.
 
-🔹 Trend Analysis
+🔹 Support & Experience
 
-Latency vs Deployment Time: Analyze performance trends and service frequency over time.
+Satisfaction vs Support Contacts: Examines how support interaction frequency affects satisfaction levels.
 
-📈 Key Metrics Summary
-Metric	Value	Description
-Total Success Rate	37.9M	Aggregate success rate across all deployments
-Average Latency	50.00 ms	Mean latency across all microservices
-Total Cost	$1.20B	Combined multi-cloud expenditure
+🔹 Key KPI Cards
+
+Total Customers: 1,000
+
+Average Transaction Amount: 266.88K (aggregate)
+
+Churned Customers: Percentage tracked through KPI indicators
+
+📈 Key Insights
+
+High churn correlation observed among customers with low satisfaction (≤4).
+
+Customers who responded to promotions showed significantly lower churn rates.
+
+Middle-income groups (60K–120K) displayed the highest total spend and purchase frequency.
+
+Customers with multiple support contacts tend to have reduced satisfaction scores, indicating potential service friction.
+
+Email Opt-In customers show higher engagement and spend, validating targeted marketing value.
+
 🧩 Tools & Technologies
 
-Visualization: Power BI Desktop & Power BI Service
+Power BI Desktop / Power BI Service – Dashboard design & visualization
 
-Data Source: CSV/Excel (simulated multi-cloud dataset)
+Data Transformation: Power Query for data cleaning and preprocessing
 
-Data Cleaning: Power Query
+Visual Elements: Bar charts, Donut charts, KPI cards, Scatter plots, Trend lines
 
-Charts Used: Bar, Donut, Trend, KPI cards
-
-Theme: Dark Mode for better readability and professional aesthetics
+Color Theme: Dark Mode for better contrast and readability
 
 🚀 Use Cases
 
-Cloud cost optimization and budget forecasting
+Customer churn prediction and prevention strategy design
 
-Multi-cloud performance benchmarking
+Identifying underperforming customer segments
 
-Identifying latency-critical services
+Marketing campaign targeting based on promotion response
 
-Monitoring resource utilization and deployment efficiency
-
-🧠 Insights Gained
-
-AWS and Azure show competitive latency, but cost structures differ significantly.
-
-Service B incurs higher costs despite moderate utilization — a clear optimization target.
-
-Success rates remain consistently above 90% across all environments, ensuring reliability.
+Customer satisfaction monitoring and support optimization
 
 📌 Future Enhancements
 
-Integration with real-time monitoring APIs (Azure Monitor, AWS CloudWatch)
+Integration with real-time CRM data sources (e.g., Salesforce, HubSpot)
 
-Predictive analytics for cost and performance forecasting
+Predictive churn modeling using Power BI + Python integration
 
-Drill-through reports for region-wise and service-level insights
+Drill-through analysis for segment-level insights
 
-Automated refresh pipeline via Power BI Gateway
+Automated data refresh pipeline with Power BI Gateway
 
 🧾 Author
 
 Created by: Neha Kanaki
-Purpose: Demonstrate analytical and visualization capabilities for multi-cloud cost and performance optimization using Power BI.
-Dataset: Simulated data representing real-world multi-cloud environments.
+Purpose: To demonstrate customer analytics, churn modeling, and visualization skills using Power BI.
+Dataset: Simulated online retail dataset prepared for analytical demonstration.
